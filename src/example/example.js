@@ -3,9 +3,19 @@ import Router from '../Router/router';
 import Switch from '../Router/switch';
 import Route from '../Router/route';
 import Link from '../Router/link';
+import WithRouter from '../Router/withRouter';
 
 const Page1 = () => <span>page1</span>;
 const Page3 = () => <span>page3</span>;
+const RouterLink = WithRouter((props) => {
+  const { history } = props;
+
+  function handleClick() {
+    history.push('/2')
+  };
+
+  return <span onClick={handleClick}>RouterLink</span>
+});
 
 class Example extends Component {
 
@@ -25,6 +35,8 @@ class Example extends Component {
           <Link to='/2'><span>LinkPage2</span></Link>
           <br/>
           <Link to='/3'><span>LinkPage3</span></Link>
+          <br/>
+          <RouterLink/>
         </Router>
       </div>
     );

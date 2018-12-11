@@ -11,6 +11,7 @@
 - [x] Route
 - [x] Link
 - [x] Switch
+- [x] WithRouter
 #### v4.4与v4.3的区别
 与现有的v4.3相比基本原理不变, 但增加了新的属性,使用了更新的API和包,写法更加React,可定制性更好
 
